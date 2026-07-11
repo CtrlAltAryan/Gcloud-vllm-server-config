@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  qwen3:
+    image: vllm/vllm-openai:v0.10.1.1
+    container_name: qwen3
+
+    runtime: nvidia
+
+    ports:
+      - "8000:8000"
+
+    environment:
+      - HF_TOKEN="${HF_TOKEN}"
+
+    volumes:
+      - ~/.cache/huggingface:/root/.cache/huggingface
+
+    ipc: host
+
+    command: >
+      --model Qwen/Qwen3-8B
+      --gpu-memory-utilization 0.90
+      --max-model-len 8192
+
+    restart: unless-stopped
