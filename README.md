@@ -1,7 +1,7 @@
 <p align="center">
   <a href="" rel="noopener">
     <img
-      src="/Gcloud-vllm-server-config/Images/Gcloud.png"
+      src="https://github.com/CtrlAltAryan/Gcloud-vllm-server-config/blob/main/Images/Gcloud.png"
       alt="Project logo"
       width="200"
       height="200"
